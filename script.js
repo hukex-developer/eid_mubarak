@@ -67,4 +67,23 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 500); // Wait for transition
         }
     });
+
+    // Copy Number Logic
+    const copyBtn = document.getElementById("copy-btn");
+    const bkashNumber = document.getElementById("bkash-number").innerText;
+
+    copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(bkashNumber).then(() => {
+            copyBtn.innerText = "কপি হয়েছে! ✅";
+            copyBtn.classList.add("success");
+
+            // Revert back after 2.5 seconds
+            setTimeout(() => {
+                copyBtn.innerText = "কপি করুন 📋";
+                copyBtn.classList.remove("success");
+            }, 2500);
+        }).catch(err => {
+            console.error("Failed to copy text: ", err);
+        });
+    });
 });
