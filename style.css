@@ -368,6 +368,53 @@ footer {
     }
 }
 
+.copy-number-section {
+    margin-top: 15px;
+    padding: 12px;
+    background: rgba(226, 19, 110, 0.08);
+    border: 1px dashed var(--primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.copy-number-section .label {
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.copy-number-section strong {
+    color: var(--primary);
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.copy-btn {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.copy-btn:hover {
+    background: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(226, 19, 110, 0.2);
+}
+
+.copy-btn.success {
+    background: #28a745;
+}
+
 @media (max-width: 600px) {
     .bengali-text {
         font-size: 3.5rem;
